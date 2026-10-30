@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: iron-fitness-site
+    runtime: static
+    buildCommand: mkdir -p public && base64 -d site_bundle.b64 | tar -xz -C public
+    staticPublishPath: public
